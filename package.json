@@ -2,7 +2,7 @@
   "main": "index.html",
   "scripts": {
     "start": "parcel src/index.html --https",
-    "deploy": "parcel build src/index.html && cp -R dist ~/../../keybase/private/tino,kbpbot/my-site"
+    "deploy": "parcel build src/index.html && cp -R dist/* ~/../../keybase/private/tino,kbpbot/my-site"
   },
   "dependencies": {
     "parcel": "^1.10.3"
