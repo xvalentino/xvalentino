@@ -1,12 +1,12 @@
-const filesToCache = ['./index.html'];
+importScripts('/cache-polyfill.js');
 
-const staticCacheName = 'pages-cache-v1';
-
-self.addEventListener('install', event => {
-  console.log('Attempting to install service worker and cache static assets');
-  event.waitUntil(
-    caches.open(staticCacheName).then(cache => {
-      return cache.addAll(filesToCache);
+self.addEventListener('install', function(e) {
+  e.waitUntil(
+    caches.open('mysite').then(function(cache) {
+      return cache.addAll(['./', './index.html']);
     }),
   );
+});
+self.addEventListener('fetch', function(event) {
+  console.log(event.request.url);
 });
