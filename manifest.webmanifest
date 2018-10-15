@@ -3,12 +3,12 @@
   "name": "Valentino Espinoza",
   "icons": [
     {
-      "src": "../panda-face.png",
+      "src": "./panda-face.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "../panda-face.png",
+      "src": "./panda-face.png",
       "type": "image/png",
       "sizes": "512x512"
     }
