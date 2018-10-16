@@ -10,3 +10,24 @@ Some things in the future I see for this is:
 * Fun Styling
 * Favicon
 * More links
+
+## Getting Started
+To run:
+You need yarn to run this app, if you don't use yarn you should. the only thing npm is good for is installing yarn ;)
+```
+npm i -g yarn
+```
+
+Install dependencies
+```
+yarn install
+```
+
+run locally
+```
+yarn run start
+```
+
+The site is now running on https://localhost:3000
+
+congrats gg
