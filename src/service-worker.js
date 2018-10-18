@@ -3,7 +3,7 @@ self.addEventListener('install', function(e) {
     caches
       .open('mysite')
       .then(function(cache) {
-        return cache.addAll(['.', './index.html', './images']);
+        return cache.addAll(['./index.js', './index.html', './images']);
       })
       .catch(),
   );
