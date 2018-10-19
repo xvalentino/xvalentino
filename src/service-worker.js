@@ -1,6 +1,6 @@
 self.addEventListener('install', function(e) {});
 
-const getRequestHash = request => {
+const removeSourceMapString = request => {
   const splitUrl = request.url.split('.');
   splitUrl.splice(-2, 1);
   return splitUrl.join('.');
@@ -18,7 +18,8 @@ self.addEventListener('fetch', function(event) {
               return Promise.all(
                 cacheNames
                   .filter(function(cacheName) {
-                    getRequestHash(event.request) === getRequestHash(cacheName);
+                    removeSourceMapString(event.request) ===
+                      removeSourceMapString(cacheName);
                   })
                   .map(function(cacheName) {
                     return cache.delete(cacheName);
