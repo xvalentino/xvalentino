@@ -9,8 +9,8 @@ Theres also a webappmanifest so that its considered a PWA, although I don't know
 Some things in the future I see for this is:
 
 - Fun Styling
-- Favicon
 - More links
+- static content that is meaningful
 
 ## Getting Started
 
