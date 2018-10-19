@@ -1,7 +1,7 @@
 {
   "main": "index.html",
   "scripts": {
-    "start": "parcel src/index.html --https",
+    "start": "parcel src/index.html",
     "deploy": "parcel build src/index.html && cp -R dist/* ~/../../keybase/private/tino,kbpbot/my-site",
     "format": "prettier --write '**/*.js'"
   },
