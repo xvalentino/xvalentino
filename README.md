@@ -7,27 +7,38 @@ I'm trying to keep it as accesible as possible.
 Theres also a webappmanifest so that its considered a PWA, although I don't know why anyone would want to install this on their phone lol.
 
 Some things in the future I see for this is:
-* Fun Styling
-* Favicon
-* More links
+
+- Fun Styling
+- Favicon
+- More links
 
 ## Getting Started
+
 To run:
 You need yarn to run this app, if you don't use yarn you should. the only thing npm is good for is installing yarn ;)
+
 ```
 npm i -g yarn
 ```
 
 Install dependencies
+
 ```
 yarn install
 ```
 
 run locally
+
 ```
-yarn run start
+yarn start
 ```
 
-The site is now running on https://localhost:3000
+The site is now running on https://localhost:1234
+
+format code
+
+```
+yarn format
+```
 
 congrats gg
