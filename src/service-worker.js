@@ -1,7 +1,6 @@
 self.addEventListener('install', function(e) {});
 
 const getRequestHash = request => {
-  console.log('request', request);
   const splitUrl = request.url.split('.');
   splitUrl.splice(-2, 1);
   return splitUrl.join('.');
@@ -22,7 +21,7 @@ self.addEventListener('fetch', function(event) {
                     getRequestHash(event.request) === getRequestHash(cacheName);
                   })
                   .map(function(cacheName) {
-                    return caches.delete(cacheName);
+                    return cache.delete(cacheName);
                   }),
               );
             });
