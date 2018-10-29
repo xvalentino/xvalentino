@@ -21,7 +21,7 @@ const cleanStaleCache = event => {
 const updateCache = (event, response) =>
   cache.put(event.request, response.clone());
 
-const respondWithCache = () =>
+const respondWithCache = event =>
   caches.open('xvalentino').then(cache => {
     cache.match(event.request).then(cacheResponse => cacheResponse);
   });
@@ -35,6 +35,6 @@ self.addEventListener('fetch', function(event) {
         console.log('response', response);
         return response;
       })
-      .catch(respondWithCache),
+      .catch(() => respondWithCache(event)),
   );
 });
