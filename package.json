@@ -2,7 +2,7 @@
   "main": "index.html",
   "scripts": {
     "start": "parcel src/index.html",
-    "deploy": "parcel build src/index.html && cp -R dist/* ~/../../keybase/private/tino,kbpbot/my-site",
+    "deploy": "./bin/deploy.sh",
     "format": "prettier --write '**/*.js'"
   },
   "dependencies": {
