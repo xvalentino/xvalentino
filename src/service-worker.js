@@ -19,7 +19,9 @@ const cleanStaleCache = (cache, event) => {
 };
 
 const respondWithCache = (cache, event) =>
-  cache.match(event.request).then(cacheResponse => cacheResponse);
+  cache.match(event.request).then(cacheResponse => {
+    return cacheResponse;
+  });
 
 self.addEventListener('fetch', event => {
   event.respondWith(
