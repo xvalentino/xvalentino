@@ -28,15 +28,13 @@ const respondWithCache = () =>
 
 self.addEventListener('fetch', function(event) {
   event.respondWith(
-    Promise.all(() => {
-      fetch(event.request)
-        .then(response => {
-          updateCache(event, response);
-          cleanStaleCache(event);
-          console.log('response', response);
-          return response;
-        })
-        .catch(respondWithCache);
-    }),
+    fetch(event.request)
+      .then(response => {
+        updateCache(event, response);
+        cleanStaleCache(event);
+        console.log('response', response);
+        return response;
+      })
+      .catch(respondWithCache),
   );
 });
