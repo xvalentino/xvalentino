@@ -1,11 +1,15 @@
 import React from 'react';
 import { ThemeProvider } from 'mineral-ui/themes';
-import Text from 'mineral-ui/Text';
+import Header from '../components/Header';
+import ExternalLinks from '../components/ExternalLinks';
 
 const Main = () => {
   return (
     <ThemeProvider>
-      <Text element="h1">Valentino</Text>
+      <React.Fragment>
+        <Header />
+        <ExternalLinks />
+      </React.Fragment>
     </ThemeProvider>
   );
 };
