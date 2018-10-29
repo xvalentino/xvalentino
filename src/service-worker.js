@@ -9,10 +9,9 @@ const removeSourceMapString = request => {
 self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.open('mysite-dynamic').then(function(cache) {
-      return cache.match(event.request).then(function(response) {
-        return (
-          response ||
-          fetch(event.request).then(function(response) {
+      return cache.match(event.request).then(function(cacheResponse) {
+        return fetch(event.request)
+          .then(function(response) {
             cache.put(event.request, response.clone());
             cache.keys().then(function(cacheNames) {
               return Promise.all(
@@ -28,7 +27,7 @@ self.addEventListener('fetch', function(event) {
             });
             return response;
           })
-        );
+          .catch(() => cacheResponse);
       });
     }),
   );
