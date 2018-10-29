@@ -4,7 +4,7 @@ const removeSourceMapString = request => {
   return splitUrl.join('.');
 };
 
-const cleanStaleCache = event => {
+const cleanStaleCache = (cache, event) => {
   cache.keys().then(function(cacheNames) {
     return Promise.all(
       cacheNames
@@ -18,23 +18,19 @@ const cleanStaleCache = event => {
   });
 };
 
-const updateCache = (event, response) =>
-  cache.put(event.request, response.clone());
+const respondWithCache = (cache, event) =>
+  cache.match(event.request).then(cacheResponse => cacheResponse);
 
-const respondWithCache = event =>
-  caches.open('xvalentino').then(cache => {
-    cache.match(event.request).then(cacheResponse => cacheResponse);
-  });
-
-self.addEventListener('fetch', function(event) {
+self.addEventListener('fetch', event => {
   event.respondWith(
-    fetch(event.request)
-      .then(response => {
-        updateCache(event, response);
-        cleanStaleCache(event);
-        console.log('response', response);
-        return response;
-      })
-      .catch(() => respondWithCache(event)),
+    caches.open('xvalentino').then(cache => {
+      return fetch(event.request)
+        .then(response => {
+          cache.put(event.request, response.clone());
+          cleanStaleCache(cache, event);
+          return response;
+        })
+        .catch(() => respondWithCache(cache, event));
+    }),
   );
 });
