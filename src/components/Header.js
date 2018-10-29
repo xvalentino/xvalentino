@@ -3,7 +3,7 @@ import Text from 'mineral-ui/Text';
 
 const Header = () => (
   <Text align="center" element="h1">
-    Valentino
+    valentino.
   </Text>
 );
 export default Header;
