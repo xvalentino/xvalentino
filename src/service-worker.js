@@ -1,3 +1,11 @@
+const CACHE = 'xvalentino';
+
+self.addEventListener('install', event => {
+  event.waitUntil(
+    caches.open(CACHE).then(cache => cache.addAll(['./index.html'])),
+  );
+});
+
 const removeSourceMapString = request => {
   const splitUrl = request.url.split('.');
   splitUrl.splice(-2, 1);
@@ -25,7 +33,7 @@ const respondWithCache = (cache, event) =>
 
 self.addEventListener('fetch', event => {
   event.respondWith(
-    caches.open('xvalentino').then(cache => {
+    caches.open(CACHE).then(cache => {
       return fetch(event.request)
         .then(response => {
           cache.put(event.request, response.clone());
