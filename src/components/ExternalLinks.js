@@ -15,11 +15,7 @@ const links = [
 ];
 
 const ExternalLinks = () => (
-  <Flex
-    justifyContent={'center'}
-    breakpoints={[1000, 'wide']}
-    direction={['column', null, 'row']}
-  >
+  <Flex wrap justifyContent={'center'}>
     {links.map(linkProps => (
       <FlexItem alignSelf="center" key={linkProps.name}>
         <ExternalLink {...linkProps} />
