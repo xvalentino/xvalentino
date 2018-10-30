@@ -12,6 +12,7 @@ const links = [
   { name: 'github', to: 'https://github.com/xvalentino' },
   { name: 'keybase', to: 'https://keybase.io/tino' },
   { name: 'soundcloud', to: 'https://soundcloud.com/gravitinos-98277575' },
+  { name: 'periscope', to: 'https://www.pscp.tv/gravitinos/' },
 ];
 
 const ExternalLinks = () => (
