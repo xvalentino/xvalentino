@@ -3,6 +3,7 @@ import { ThemeProvider } from 'mineral-ui/themes';
 import Header from '../components/Header';
 import ExternalLinks from '../components/ExternalLinks';
 import Bio from '../components/Bio';
+import Projects from '../components/Projects';
 
 const Main = () => {
   return (
@@ -11,6 +12,7 @@ const Main = () => {
         <Header />
         <ExternalLinks />
         <Bio />
+        <Projects />
       </React.Fragment>
     </ThemeProvider>
   );
