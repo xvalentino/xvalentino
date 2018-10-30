@@ -1,9 +1,13 @@
 import React from 'react';
 import ExternalLink from './ExternalLink';
-import Flex from 'mineral-ui/Flex';
+import Flex, { FlexItem } from 'mineral-ui/Flex';
+// import TwitterIcon from '../icons/Twitter_Logo_Blue';
 
 const links = [
-  { name: 'twitter', to: 'https://twitter.com/gravitinos' },
+  {
+    name: 'twitter',
+    to: 'https://twitter.com/gravitinos',
+  },
   { name: 'twitch', to: 'https://twitch.tv/xvalentino13' },
   { name: 'instagram', to: 'https://instagram.com/gravitinos' },
   { name: 'github', to: 'https://github.com/xvalentino' },
@@ -12,9 +16,15 @@ const links = [
 ];
 
 const ExternalLinks = () => (
-  <Flex justifyContent="center">
+  <Flex
+    justifyContent={'center'}
+    breakpoints={[1000, 'wide']}
+    direction={['column', null, 'row']}
+  >
     {links.map(linkProps => (
-      <ExternalLink key={linkProps.name} {...linkProps} />
+      <FlexItem alignSelf="center" key={linkProps.name}>
+        <ExternalLink {...linkProps} />
+      </FlexItem>
     ))}
   </Flex>
 );
