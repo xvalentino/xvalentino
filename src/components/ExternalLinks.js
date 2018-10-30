@@ -1,7 +1,6 @@
 import React from 'react';
 import ExternalLink from './ExternalLink';
 import Flex, { FlexItem } from 'mineral-ui/Flex';
-// import TwitterIcon from '../icons/Twitter_Logo_Blue';
 
 const links = [
   {
