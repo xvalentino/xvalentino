@@ -2,17 +2,22 @@
   "main": "index.html",
   "scripts": {
     "start": "parcel src/index.html",
-    "deploy": "./bin/deploy.sh",
+    "build": "parcel build src/index.html",
+    "docker:build": "docker-compose build production",
+    "docker:run": "docker-compose up production",
+    "dev": "docker-compose up dev",
+    "deploy:keybase": "./bin/deploy.sh",
     "format": "prettier --write '**/*.js'"
   },
   "dependencies": {
+    "@rehooks/document-title": "^1.0.1",
     "emotion": "^9.2.12",
     "emotion-theming": "^9.2.9",
     "glamorous": "^4.13.1",
     "mineral-ui": "0.48.0",
     "parcel": "^1.10.3",
     "prettier": "^1.14.3",
-    "react": "16.7.0-alpha.0",
+    "react": "16.12.0",
     "react-dom": "^16.6.0",
     "react-emotion": "^9.2.12"
   }

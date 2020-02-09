@@ -4,11 +4,13 @@ import Header from '../components/Header';
 import ExternalLinks from '../components/ExternalLinks';
 import Bio from '../components/Bio';
 import Projects from '../components/Projects';
+import Title from '../components/Title';
 
 const Main = () => {
   return (
     <ThemeProvider>
       <React.Fragment>
+        <Title />
         <Header />
         <ExternalLinks />
         <Bio />

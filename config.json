@@ -1,0 +1,21 @@
+{
+  "name": "Valentino",
+  "header": "valentino.",
+  "title": "Valentino Espinoza",
+  "links": [
+    {
+      "name": "twitter",
+      "to": "https://twitter.com/gravitinos"
+    },
+    { "name": "twitch", "to": "https://twitch.tv/gravitinos" },
+    { "name": "instagram", "to": "https://instagram.com/gravitinos" },
+    { "name": "github", "to": "https://github.com/xvalentino" },
+    { "name": "keybase", "to": "https://keybase.io/tino" },
+    {
+      "name": "soundcloud",
+      "to": "https://soundcloud.com/gravitinos-98277575"
+    },
+    { "name": "periscope", "to": "https://www.pscp.tv/gravitinos/" }
+  ],
+  "bio": "My name is Valentino Espinoza. I like to make things. I'm an professional software engineer, amateur musician, and part-time streamer. Check out whatever content you are drawn to."
+}
