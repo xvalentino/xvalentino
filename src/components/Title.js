@@ -1,9 +1,9 @@
 import React from 'react';
-import useDocumentTitle from '@rehooks/document-title';
+import useMetaTags from 'react-metatags-hook';
 import config from '../../config.json';
 
 const Title = () => {
-  useDocumentTitle(config.title);
+  useMetaTags(config.meta);
   return null;
 };
 
