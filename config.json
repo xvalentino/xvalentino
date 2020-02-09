@@ -15,7 +15,8 @@
       "name": "soundcloud",
       "to": "https://soundcloud.com/gravitinos-98277575"
     },
-    { "name": "periscope", "to": "https://www.pscp.tv/gravitinos/" }
+    { "name": "periscope", "to": "https://www.pscp.tv/gravitinos/" },
+    { "name": "resume", "to": "http://resume.xvalentino.com" }
   ],
   "bio": "My name is Valentino Espinoza. I like to make things. I'm an professional software engineer, amateur musician, and part-time streamer. Check out whatever content you are drawn to."
 }
